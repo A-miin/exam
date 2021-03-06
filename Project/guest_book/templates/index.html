@@ -2,6 +2,9 @@
 {% block title %} Лист записей {% endblock title %}
 {% block header-text %} Список записей{% endblock header-text %}
 {% block content %}
+    <form action="{% url 'record-list' %}" method="POST">
+        {% include 'form.html' with button_text="Найти" %}
+    </form>
     {%for record in records%}
         <div class="card mb-2 mt-2">
           <div class="card-body">
