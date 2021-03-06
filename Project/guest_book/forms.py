@@ -1,19 +1,11 @@
 from django import forms
 
-# from .models import Product
-# CATEGORY_CHOICES=[
-#     ('breakfast','завтрак'),
-#     ('first meal','первые блюда'),
-#     ('second courses','вторые блюда'),
-#     ('drinks','напитки '),
-#     ('other','разное'),
-# ]
-#
-# class ProductForm(forms.ModelForm):
-#
-#     class Meta:
-#         model = Product
-#         fields = ('name', 'description', 'category', 'price', 'remainder')
+from .models import Record
+
+class RecordForm(forms.ModelForm):
+    class Meta:
+        model = Record
+        fields = ('name', 'email', 'text')
 
 
 class RecordSearchForm(forms.Form):
