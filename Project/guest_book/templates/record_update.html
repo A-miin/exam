@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %} Редактирование {% endblock title %}
+{% block header-text %} Редактирование записи {% endblock header-text %}
+{% block content %}
+    <form action="{% url 'record-update'  record.id %}" method="POST">
+        {% include 'form.html' with button_text="Сохранить" %}
+    </form>
+{% endblock content%}
