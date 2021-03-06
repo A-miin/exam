@@ -6,9 +6,10 @@ from .forms import RecordSearchForm, RecordForm
 # Create your views here.
 def index(request):
     form = RecordSearchForm()
+    add_form = RecordForm()
     if request.method=='GET':
         records = Record.objects.all().filter(status='active').order_by('-created_at')
-        return render(request, 'index.html', context={'records':records, 'form':form})
+        return render(request, 'index.html', context={'records':records, 'form':form, 'add_form':add_form})
     elif request.method=='POST':
         name = request.POST.get('name')
         records = Record.objects.all().filter(name=name, status='active').order_by('-created_at')

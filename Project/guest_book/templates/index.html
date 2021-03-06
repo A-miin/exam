@@ -1,18 +1,50 @@
 {% extends 'base.html' %}
 {% block title %} Лист записей {% endblock title %}
-{% block header-text %} Список записей{% endblock header-text %}
 {% block content %}
-    <form action="{% url 'record-list' %}" method="POST">
-        {% include 'form.html' with button_text="Найти" %}
-    </form>
-    {%for record in records%}
-        <div class="card mb-2 mt-2">
-          <div class="card-body">
-            <h5 class="card-title">{{ record.name}}({{ record.email }})</h5>
-            <p class="card-text">{{ record.text}}</p>
-            <a href="{% url 'record-update' record.id %}" class="btn btn-outline-info">Edit</a>
-            <a href="{% url 'record-delete' record.id %}" class="btn btn-outline-danger">Delete</a>
-          </div>
+
+
+    <h3>Искать по имени</h3>
+    <div class="mb-5">
+        <form action="{% url 'record-list' %}" method="POST">
+            {% include 'form.html' with button_text="Найти" %}
+        </form>
+    </div>
+
+    <h3>Список записей </h3>
+    <div class="mb-5">
+        {%for record in records%}
+            <div class="card mb-2 mt-2">
+              <div class="card-body">
+                  <div class="d-flex justify-content-between">
+                    <h5 class="card-title">{{ record.name}}({{ record.email }})</h5>
+                      <div>
+                           <a href="{% url 'record-update' record.id %}" class="btn btn-outline-info">Edit</a>
+                            <a href="{% url 'record-delete' record.id %}" class="btn btn-outline-danger">Delete</a>
+                      </div>
+                  </div>
+                <p class="card-text">{{ record.text}}</p>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h3>Создать новую запись</h3>
+    {% if add_form %}
+        <div class="border-top border-primary mb-5">
+            <form action="{% url 'record-add' %}" method="POST">
+                {% csrf_token %}
+                {% for error in form.non_field_errors %}
+                   <p class="text-danger">{{ error }}</p>
+                {% endfor %}
+                {% for field in add_form %}
+                   <p><label for="{{ field.id_for_label }}">{{ field.label }}</label></p>
+                   {% for error in field.errors %}
+                       <p class="text-danger">{{ error }}</p>
+                   {% endfor %}
+                   <p {% if field.errors %} class="border border-danger"{% endif %}>{{ field }}</p>
+                {% endfor %}
+                <p><input type="submit" value="Создать" class="btn btn-outline-primary"></p>
+            </form>
         </div>
-    {% endfor %}
+    {% endif %}
 {% endblock content%}
