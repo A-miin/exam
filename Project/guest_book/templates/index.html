@@ -28,8 +28,9 @@
         {% endfor %}
     </div>
 
-    <h3>Создать новую запись</h3>
+
     {% if add_form %}
+        <h3>Создать новую запись</h3>
         <div class="border-top border-primary mb-5">
             <form action="{% url 'record-add' %}" method="POST">
                 {% csrf_token %}
