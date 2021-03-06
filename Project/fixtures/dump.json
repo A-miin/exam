@@ -1,0 +1,104 @@
+[
+{
+  "model": "guest_book.record",
+  "pk": 1,
+  "fields": {
+    "name": "Зулайка",
+    "email": "admin@gmail.com",
+    "text": "текст обращения",
+    "created_at": "2021-03-06T06:15:39.378Z",
+    "updated_at": "2021-03-06T06:15:39.378Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 2,
+  "fields": {
+    "name": "Вася",
+    "email": "admin@gmail.com",
+    "text": "обращение Васи",
+    "created_at": "2021-03-06T06:16:11.415Z",
+    "updated_at": "2021-03-06T06:16:11.415Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 3,
+  "fields": {
+    "name": "Петя",
+    "email": "admin@gmail.com",
+    "text": "обращение Пети",
+    "created_at": "2021-03-06T06:16:27.980Z",
+    "updated_at": "2021-03-06T06:16:27.980Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 4,
+  "fields": {
+    "name": "Ваня",
+    "email": "admin@gmail.com",
+    "text": "обращение Вани",
+    "created_at": "2021-03-06T06:16:47.146Z",
+    "updated_at": "2021-03-06T06:16:47.146Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 5,
+  "fields": {
+    "name": "Кутман",
+    "email": "admin@gmail.com",
+    "text": "обращение Кутмана",
+    "created_at": "2021-03-06T06:17:01.715Z",
+    "updated_at": "2021-03-06T06:17:01.715Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 6,
+  "fields": {
+    "name": "Окрошка",
+    "email": "admin@gmail.com",
+    "text": "обращение Окрошки",
+    "created_at": "2021-03-06T06:17:24.515Z",
+    "updated_at": "2021-03-06T06:17:24.515Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 7,
+  "fields": {
+    "name": "Чудо",
+    "email": "admin@gmail.com",
+    "text": "обращение Чуда",
+    "created_at": "2021-03-06T06:17:47.923Z",
+    "updated_at": "2021-03-06T06:17:47.924Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$bXz1E9OuncsN$RSxzNDI1SyAbclfAUlIGSMhCs5C0FSJ0hd/K2ya9q18=",
+    "last_login": "2021-03-06T06:15:04.817Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-03-06T06:14:30.834Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
