@@ -11,6 +11,7 @@
             <h5 class="card-title">{{ record.name}}({{ record.email }})</h5>
             <p class="card-text">{{ record.text}}</p>
             <a href="{% url 'record-update' record.id %}" class="btn btn-outline-info">Edit</a>
+            <a href="{% url 'record-delete' record.id %}" class="btn btn-outline-danger">Delete</a>
           </div>
         </div>
     {% endfor %}

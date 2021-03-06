@@ -49,3 +49,12 @@ def record_update(request, pk):
             record.save()
             return redirect('record-list')
         return render(request, 'record_update.html', context={'record':record, 'form':form})
+
+def record_delete(request,pk):
+    record = get_object_or_404(Record, id=pk)
+    if request.method=='GET':
+        return render(request, 'record_delete.html', context={'record':record})
+    elif request.method=='POST':
+        if request.POST.get('action')=='Да':
+            record.delete()
+        return redirect('record-list')
