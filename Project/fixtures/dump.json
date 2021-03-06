@@ -4,10 +4,10 @@
   "pk": 1,
   "fields": {
     "name": "Зулайка",
-    "email": "admin@gmail.com",
-    "text": "текст обращения",
+    "email": "zulaykaisaeva@gmail.com",
+    "text": "текст обращения Zulayki",
     "created_at": "2021-03-06T06:15:39.378Z",
-    "updated_at": "2021-03-06T06:15:39.378Z",
+    "updated_at": "2021-03-06T08:27:28.302Z",
     "status": "active"
   }
 },
@@ -81,6 +81,42 @@
     "created_at": "2021-03-06T06:17:47.923Z",
     "updated_at": "2021-03-06T06:17:47.924Z",
     "status": "blocked"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 8,
+  "fields": {
+    "name": "Вася",
+    "email": "drugoy_vasya@gmail.com",
+    "text": "текст другого Васи",
+    "created_at": "2021-03-06T06:55:29.925Z",
+    "updated_at": "2021-03-06T06:55:29.925Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 10,
+  "fields": {
+    "name": "Окрошка",
+    "email": "admin@gmail.com",
+    "text": "new text for okroshka",
+    "created_at": "2021-03-06T07:54:34.498Z",
+    "updated_at": "2021-03-06T11:02:38.764Z",
+    "status": "active"
+  }
+},
+{
+  "model": "guest_book.record",
+  "pk": 17,
+  "fields": {
+    "name": "Вася",
+    "email": "tretiy_vasya@gmail.com",
+    "text": "test for Vasya",
+    "created_at": "2021-03-06T11:03:07.537Z",
+    "updated_at": "2021-03-06T11:08:51.027Z",
+    "status": "active"
   }
 },
 {
